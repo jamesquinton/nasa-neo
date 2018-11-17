@@ -1,0 +1,15 @@
+{
+  "name": "getneodata",
+  "version": "1.0.0",
+  "description": "Get Nasa Neo data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Quinton",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.358.0",
+    "request": "^2.88.0"
+  }
+}
