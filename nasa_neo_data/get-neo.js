@@ -69,7 +69,7 @@ var getNeo = function () {
     self.callAPI(body.links.next, function (body) {
       self.normalizeData(body, end);
     });
-  }
+  };
 
   /**
    * Save data to DynamoDB.
@@ -90,7 +90,27 @@ var getNeo = function () {
         console.log("Success", data);
       }
     });
-  }
+  };
+
+  /**
+   * Get date in correct format.
+   */
+  self.getDate = function (incrementDay) {
+    var today = new Date();
+    var dd = today.getDate() + incrementDay;
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+      dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+      mm = '0' + mm;
+    }
+
+    return yyyy + '-' + mm + '-' + dd;
+  };
 };
 
 module.exports = getNeo;
