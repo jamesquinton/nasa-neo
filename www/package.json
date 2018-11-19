@@ -24,6 +24,7 @@
   ],
   "devDependencies": {
     "aws-sdk": "^2.358.0",
+    "axios": "^0.18.0",
     "react-vis": "^1.11.4"
   },
   "homepage": "http://jquinton.net/neo"

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AWS from 'aws-sdk';
+import axios from 'axios';
 import {makeWidthFlexible, XYPlot, MarkSeries, XAxis, YAxis} from 'react-vis';
 
 import './App.css';
@@ -11,6 +12,7 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    this.getToday();
     this.state = {
       points: [],
       start: 1420070401,
@@ -19,6 +21,20 @@ class App extends Component {
       onDec2018: '',
       on2015: 'active'
     };
+  }
+
+  getToday() {
+    // Not for production use, will need some additional checking to avoid overloading APIs.
+    axios.get("https://j2pfgjdtrl.execute-api.eu-central-1.amazonaws.com/default/nasa_neo_data_get_today")
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+    .then(function () {
+      console.log('ready');
+    });
   }
 
   updateYear(start, end, obj, e) {
