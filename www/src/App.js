@@ -31,9 +31,6 @@ class App extends Component {
     })
     .catch(function (error) {
       console.log(error);
-    })
-    .then(function () {
-      console.log('ready');
     });
   }
 
@@ -106,7 +103,7 @@ class App extends Component {
         });
 
         distance.sort();
-        console.log(distance[0]);
+
         self.setState({
           points: neo,
           median: self.calculateMedian(magnitude.sort()),
@@ -122,7 +119,6 @@ class App extends Component {
     for (i = 0; i < arr.length; i += 1) {
         total += arr[i];
     }
-    console.log(total);
     return total / arr.length;
   }
 
