@@ -1,10 +1,10 @@
-Todo:
+# Nasa NEO data test App
 
-Documentation
-DynamoDB security.
-Namespace  js
-Get today's data
-Closest astroid
-median 2015
-median 2018
-Frontend
+### To get historical data
+
+1. cd to `nasa_neo_data`.
+2. run `node index.js` to grab neo data and post to DynamoDB.
+
+### Running the React webapp
+1. cd to `www`
+2. run `npm start`
