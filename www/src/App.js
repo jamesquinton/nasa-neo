@@ -148,7 +148,7 @@ class App extends Component {
         </FlexibleXYPlot>
 
         <div className="info">
-          <p><i>Near earth objects plotted against distance/time.</i></p>
+          <p><i>Near earth objects plotted against distance/time. Size of Mark relative to absolute magnitude.</i></p>
           <button className={this.state.on2015} onClick={self.updateYear.bind(this, 1420070401, 1451606399)}>2015</button>
           <button className={this.state.onDec2018} onClick={self.updateYear.bind(this, 1450483200, 1451174400)}>19th-20th Dec 2015</button>
           <button className={this.state.on2018} onClick={self.updateYear.bind(this, 1514764800, 1546300799)}>2018</button>
