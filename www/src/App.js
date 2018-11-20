@@ -137,7 +137,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <FlexibleXYPlot height={800}>
+        <FlexibleXYPlot height={600}>
           <XAxis title="Date" tickTotal={0} style={{
             title: {stroke: 'none', fill: '#000', fontWeight: 600}
           }}/>
